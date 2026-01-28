@@ -1,0 +1,26 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: demo
+  title: New Template
+  description: A new Backstage software template
+spec:
+  owner: my-team
+  type: service
+  parameters:
+    - title: Provide component information
+      properties:
+        secret:
+          title: Secret
+          type: string
+          ui:field: Secret
+  steps:
+    - id: fetch-template-mkx4h07y
+      name: Fetch Template
+      action: fetch:template
+    - id: fetch-plain-file-mkx4hbnp
+      name: Fetch Plain File
+      action: fetch:plain:file
+  output:
+    links:
+      - title: New Link
